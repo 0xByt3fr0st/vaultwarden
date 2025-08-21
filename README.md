@@ -82,10 +82,10 @@ You can replace `docker` with `podman` if you prefer to use podman.
 ```shell
 docker pull vaultwarden/server:latest
 docker run --detach --name vaultwarden \
-  --env DOMAIN="https://vw.domain.tld" \
+  --env DOMAIN="https://vault.pryvon.com" \
   --volume /vw-data/:/data/ \
   --restart unless-stopped \
-  --publish 127.0.0.1:8000:80 \
+  --publish 0.0.0.0:8000:80 \
   vaultwarden/server:latest
 ```
 
